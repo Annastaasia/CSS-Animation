@@ -14,7 +14,7 @@ main {
 
   h1 {
     grid-area: main__h1;
-    margin-top: 20%;
+    margin: 18% 0% 0% 0%;
     font-size: 48px;
     font-weight: 700;
     line-height: 65px;
@@ -35,7 +35,7 @@ main {
     cursor: pointer;
     border-radius: 30px;
     outline: none;
-    margin-top: 2%;
+    // margin-top: 10%;
   }
 
   button:hover {
@@ -52,7 +52,8 @@ main {
     "main__button"
     "main__form"
     "main__ava";
-  grid-template-rows: 40vh 10vh 10vh 10vh 20vh;
+  grid-template-rows: 40vh 10vh 10vh 15vh 20vh;
+  row-gap: 1rem;
 }
 
 .main__h1__p {
@@ -67,7 +68,7 @@ main {
 .main__p {
   grid-area: main__p;
   max-width: 80%;
-  margin-top: 4%;
+  // margin-top: 10%;
   font-size: 15px;
   font-weight: 500;
   line-height: 26px;
@@ -84,7 +85,7 @@ main {
   border-radius: 100px;
   box-shadow: 0px 20px 30px 0px #dedede40;
   padding: 10px 0px 10px 29px;
-  margin-top: 2%;
+  // margin-top: 12%;
   background-color: #fff;
 
   input {
@@ -119,8 +120,8 @@ main {
   }
 
   button:hover {
-    background: #a5f48d;
-    border: 1px solid #338d32;
+    background: #48b774;
+    border: 1px solid #193d18;
   }
 }
 
@@ -130,30 +131,79 @@ form:focus-within {
 
 .main__ava {
   grid-area: main__ava;
+  display: grid;
   grid-template-areas: "main__avacontainer main__phref";
-  grid-template-columns: 0.4fr 0.6fr;
-  margin-top: 4%;
-  //   font-size: 15px;
-  //   font-weight: 500;
-  //   line-height: 26px;
-  //   color: #7c7c7c;
+  grid-template-columns: 0.2fr 0.8fr;
+  // margin-top: 6%;
 }
 
 .main__avacontainer {
   grid-area: main__avacontainer;
-  //   display: flex;
-  //   flex-direction: row;
   position: relative;
-  height: 55px;
-  width: 55px;
 }
-
-.main__ava4 {
+.main__ava1 {
   position: absolute;
-  left: 10px;
 }
-
+.main__ava2 {
+  position: absolute;
+  left: 25px;
+}
 .main__ava3 {
   position: absolute;
-  left: 30px;
+  left: 50px;
+}
+.main__ava4 {
+  position: absolute;
+  left: 70px;
+}
+
+.main__phref {
+  grid-area: main__phref;
+  padding: 12px 18px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  color: #707070;
+}
+
+.main__href {
+  text-decoration: none;
+  color: #fd905a;
+}
+
+.main__photo {
+  grid-area: main__photo;
+  display: grid;
+  grid-template-areas:
+    ". main__italy ."
+    "main__england main__girl main__indian2"
+    "main__indian1 main__girl main__indian3";
+  grid-template-columns: 0.2fr 0.6fr 0.2fr;
+  justify-items: center;
+}
+
+.main__italy {
+  grid-area: main__italy;
+  display: grid;
+}
+.main__england {
+  grid-area: main__england;
+  display: grid;
+}
+.main__girl {
+  grid-area: main__girl;
+  display: grid;
+}
+.main__indian2 {
+  grid-area: main__indian2;
+  display: grid;
+}
+.main__indian1 {
+  grid-area: main__indian1;
+  display: grid;
+}
+.main__indian3 {
+  grid-area: main__indian3;
+  display: grid;
 }
