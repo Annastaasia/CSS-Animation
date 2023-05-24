@@ -8,8 +8,8 @@ main {
   display: grid;
   justify-items: start;
   grid-template-areas: "main__container main__photo";
-  grid-template-columns: 1.4fr 0.6fr;
-  padding: 0 10vw;
+  grid-template-columns: 1fr 0.6fr;
+  padding: 0 9vw;
   width: 100vw;
 }
 main h1 {
@@ -163,38 +163,119 @@ form:focus-within {
 
 .main__photo {
   grid-area: main__photo;
-  display: grid;
-  grid-template-areas: ". main__italy ." "main__england main__girl main__indian2" "main__indian1 main__girl main__indian3";
-  grid-template-columns: 0.2fr 0.6fr 0.2fr;
-  justify-items: center;
+  position: relative;
+}
+
+.green_round {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  padding: 20px;
+  margin: 100px auto;
+  border-radius: 50%;
+  background: #48b774;
 }
 
 .main__italy {
-  grid-area: main__italy;
-  display: grid;
+  animation-delay: 3.8s;
+  animation: italy 15s infinite linear;
+  overflow: hidden;
 }
 
 .main__england {
-  grid-area: main__england;
-  display: grid;
+  animation-delay: 3.4s;
+  animation-name: england;
 }
 
 .main__girl {
-  grid-area: main__girl;
-  display: grid;
+  position: absolute;
+  z-index: 4;
+  padding-top: 35%;
+  background: none;
 }
 
 .main__indian2 {
-  grid-area: main__indian2;
-  display: grid;
+  animation-delay: 3s;
+  animation-name: indian2;
 }
 
 .main__indian1 {
-  grid-area: main__indian1;
-  display: grid;
+  animation-delay: 4.2s;
+  animation-name: indian1;
 }
 
 .main__indian3 {
-  grid-area: main__indian3;
-  display: grid;
+  animation-delay: 4.4s;
+  animation-name: indian3;
+}
+
+.main__italy,
+.main__england,
+.main__indian2,
+.main__indian1,
+.main__indian3 {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: 30%;
+  background: none;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes italy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    from {
+      transform: translateY(-235px);
+      opacity: 1;
+      transform: rotate(0turn) translateY(-290px) translateY(50%) rotate(1turn);
+    }
+    to {
+      transform: translateY(-235px);
+      opacity: 1;
+      transform: rotate(1turn) translateY(-290px) translateY(50%) rotate(0turn);
+    }
+  }
+}
+@keyframes indian1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(235px, -115px);
+    opacity: 1;
+  }
+}
+@keyframes indian3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(235px, 115px);
+    opacity: 1;
+  }
+}
+@keyframes indian2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-235px, 115px);
+    opacity: 1;
+  }
+}
+@keyframes england {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-235px, -115px);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=mainpage.css.map */
