@@ -22,11 +22,30 @@
                 <li><a class="header__nav__help" href="#help">H<p>el</p>p</a></li>
             </ul>
         </nav>
+        <div class="header__mobile">
+            <img class="header__logomobile" alt="logo" src="./assets/images/logo.svg">
+            <nav class="header__navmobile">
+                <div class="header__navmobile__openmenu"><a href="#" class="link" onclick="openNav()">Menu</a></div>
+                <ul id="ul">
+                    <li><a href="javascript:void(0)" class="header__navmobile__closemenu" onclick="closeNav()">&times;
+                        </a></li>
+                    <li class="header__navmobile__mobileTopUp"><a href="#mobileTopUp" class="link1">Mobile Top
+                            Up</a>
+                    </li>
+                    <li><a href="##about" class="header__navmobile__about">About</a></li>
+                    <li class="header__navmobile__rate"><a href="#rate" class="link1">Rate</a></li>
+                    <li class="header__navmobile__help"><a href="#help" class="link1">Help</a></li>
+                </ul>
+            </nav>
+        </div>
         <button class="header__button" type="button">Sign Up</button>
     </header>
+
+
     <main class="main">
         <div class="main__container">
-            <h1 class="main__h1">Now Buy Your <p class="main__h1__p">PIN or <span class="main__h1__span">Top Up</span>
+            <h1 class="main__h1">Now Buy Your <p class="main__h1__p">PIN or <span class="main__h1__span">Top
+                        Up</span>
                 </p> With Bank Transfer
             </h1>
             <p class="main__p">We Make international calling simple, relible, and cheap basedon your unique calling
@@ -61,9 +80,9 @@
             </div>
             <img src="./assets/images/girl.png" alt="girl" class="main__girl">
         </div>
-
     </main>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/menu.js"></script>
 </body>
 
 </html>
