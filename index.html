@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class="header" id="header">
+    <header class="header">
         <img class="header__logo" alt="logo" src="./assets/images/logo.svg">
         <nav class="header__nav">
             <ul>
@@ -24,7 +24,7 @@
         </nav>
         <button class="header__button" type="button">Sign Up</button>
     </header>
-    <main id="main" class="main">
+    <main class="main">
         <div class="main__container">
             <h1 class="main__h1">Now Buy Your <p class="main__h1__p">PIN or <span class="main__h1__span">Top Up</span>
                 </p> With Bank Transfer
@@ -33,9 +33,9 @@
                 behavior.</p>
             <button class="main__button" type="button">Get Started</button>
             <form class="main__form">
-                <input type="text" placeholder="Where do you want to call?" name="name" class="form__input"
-                    minlength="4" maxlength="12" pattern="[a-zA-Z]+$" required>
-                <button class="form__button" type="button"><img class="form__img" alt="search"
+                <input type="text" placeholder="Where do you want to call?" name="input" class="main__input" id="input"
+                    maxlength="12" required>
+                <button class="form__button" type="button" id="click"><img class="form__img" alt="search"
                         src="./assets/images/search.svg"></img></button>
             </form>
             <div class="main__ava">
@@ -63,7 +63,7 @@
         </div>
 
     </main>
-
+    <script src="./scripts/script.js"></script>
 </body>
 
 </html>

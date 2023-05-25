@@ -14,7 +14,7 @@ main {
 }
 main h1 {
   grid-area: main__h1;
-  margin: 18% 0% 0% 0%;
+  margin: 12% 0% 0% 0%;
   font-size: 48px;
   font-weight: 700;
   line-height: 65px;
@@ -43,7 +43,7 @@ main button:hover {
 .main__container {
   display: grid;
   grid-template-areas: "main__h1" "main__p" "main__button" "main__form" "main__ava";
-  grid-template-rows: 40vh 10vh 10vh 15vh 20vh;
+  grid-template-rows: 40vh 15vh 10vh 15vh 10vh;
   row-gap: 1rem;
 }
 
@@ -59,6 +59,7 @@ main button:hover {
 .main__p {
   grid-area: main__p;
   max-width: 80%;
+  margin-top: 4%;
   font-size: 15px;
   font-weight: 500;
   line-height: 26px;
@@ -127,22 +128,23 @@ form:focus-within {
   position: relative;
 }
 
-.main__ava1 {
+.main__ava1,
+.main__ava2,
+.main__ava3,
+.main__ava4 {
   position: absolute;
+  background: none;
 }
 
 .main__ava2 {
-  position: absolute;
   left: 25px;
 }
 
 .main__ava3 {
-  position: absolute;
   left: 50px;
 }
 
 .main__ava4 {
-  position: absolute;
   left: 70px;
 }
 
@@ -166,47 +168,42 @@ form:focus-within {
   position: relative;
 }
 
+.main__girl {
+  position: absolute;
+  z-index: 4;
+  margin: 100px auto;
+  background: none;
+}
+
 .green_round {
   position: absolute;
+  z-index: 3;
   width: 280px;
   height: 280px;
   padding: 20px;
-  margin: 100px auto;
+  margin: 160px 10px;
   border-radius: 50%;
   background: #48b774;
 }
 
-.main__italy {
-  animation-delay: 3.8s;
-  animation: italy 15s infinite linear;
-  overflow: hidden;
+.main__indian2 {
+  animation: indian2 2s linear 3s forwards, indian2_round 15s linear 7s infinite;
 }
 
 .main__england {
-  animation-delay: 3.4s;
-  animation-name: england;
+  animation: england 2s linear 3.4s forwards, england_round 15s linear 7s infinite;
 }
 
-.main__girl {
-  position: absolute;
-  z-index: 4;
-  padding-top: 35%;
-  background: none;
-}
-
-.main__indian2 {
-  animation-delay: 3s;
-  animation-name: indian2;
+.main__italy {
+  animation: italy 1s linear 4.2s forwards, italy_round 15s linear 7s infinite;
 }
 
 .main__indian1 {
-  animation-delay: 4.2s;
-  animation-name: indian1;
+  animation: indian1 1s linear 4.6s forwards, indian1_round 15s linear 7s infinite;
 }
 
 .main__indian3 {
-  animation-delay: 4.4s;
-  animation-name: indian3;
+  animation: indian3 1s linear 5s forwards, indian3_round 15s linear 7s infinite;
 }
 
 .main__italy,
@@ -215,36 +212,38 @@ form:focus-within {
 .main__indian1,
 .main__indian3 {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   top: 30%;
   left: 30%;
   background: none;
   opacity: 0;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
 }
 
 @keyframes italy {
   0% {
     opacity: 0;
   }
+  60% {
+    opacity: 0;
+  }
   100% {
-    from {
-      transform: translateY(-235px);
-      opacity: 1;
-      transform: rotate(0turn) translateY(-290px) translateY(50%) rotate(1turn);
-    }
-    to {
-      transform: translateY(-235px);
-      opacity: 1;
-      transform: rotate(1turn) translateY(-290px) translateY(50%) rotate(0turn);
-    }
+    transform: translateY(-235px);
+    opacity: 1;
+  }
+}
+@keyframes italy_round {
+  from {
+    transform: rotate(0turn) translateY(-295px) translateY(50%) rotate(1turn);
+  }
+  to {
+    transform: rotate(1turn) translateY(-295px) translateY(50%) rotate(0turn);
   }
 }
 @keyframes indian1 {
   0% {
+    opacity: 0;
+  }
+  60% {
     opacity: 0;
   }
   100% {
@@ -252,8 +251,19 @@ form:focus-within {
     opacity: 1;
   }
 }
+@keyframes indian1_round {
+  from {
+    transform: rotate(0turn) translate(225px, -115px) translateY(50%) rotate(1turn);
+  }
+  to {
+    transform: rotate(1turn) translate(225px, -115px) translateY(50%) rotate(0turn);
+  }
+}
 @keyframes indian3 {
   0% {
+    opacity: 0;
+  }
+  60% {
     opacity: 0;
   }
   100% {
@@ -261,8 +271,19 @@ form:focus-within {
     opacity: 1;
   }
 }
+@keyframes indian3_round {
+  from {
+    transform: rotate(0turn) translate(195px, 55px) translateY(50%) rotate(1turn);
+  }
+  to {
+    transform: rotate(1turn) translate(195px, 55px) translateY(50%) rotate(0turn);
+  }
+}
 @keyframes indian2 {
   0% {
+    opacity: 0;
+  }
+  60% {
     opacity: 0;
   }
   100% {
@@ -270,12 +291,31 @@ form:focus-within {
     opacity: 1;
   }
 }
+@keyframes indian2_round {
+  from {
+    transform: rotate(0turn) translate(-195px, 55px) translateY(50%) rotate(1turn);
+  }
+  to {
+    transform: rotate(1turn) translate(-195px, 55px) translateY(50%) rotate(0turn);
+  }
+}
 @keyframes england {
   0% {
+    opacity: 0;
+  }
+  70% {
     opacity: 0;
   }
   100% {
     transform: translate(-235px, -115px);
     opacity: 1;
+  }
+}
+@keyframes england_round {
+  from {
+    transform: rotate(0turn) translate(-235px, -115px) translateY(50%) rotate(1turn);
+  }
+  to {
+    transform: rotate(1turn) translate(-235px, -115px) translateY(50%) rotate(0turn);
   }
 }/*# sourceMappingURL=mainpage.css.map */

@@ -4,9 +4,11 @@
   margin-top: 2%;
   align-items: center;
   justify-content: center;
-  width: 100vw;
   height: 10vh;
   line-height: 18px;
+}
+.header img {
+  max-width: 131px;
 }
 .header nav {
   display: flex;
@@ -22,7 +24,7 @@
   margin: 0px 0px;
   padding-left: 0px;
   list-style: none;
-  width: 850px;
+  width: 63vw;
   height: 75px;
   align-self: center;
 }
