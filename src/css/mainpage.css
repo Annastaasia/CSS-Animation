@@ -46,10 +46,7 @@
   .main__container {
     display: grid;
     grid-template-areas: "main__h1" "main__p" "main__button" "main__form" "main__ava";
-    grid-template-rows: 40vh 15vh 10vh 15vh 10vh;
-    row-gap: 1rem;
-    max-height: -moz-min-content;
-    max-height: min-content;
+    row-gap: 2rem;
   }
   .main__h1__p {
     padding: 0;
@@ -311,7 +308,7 @@
   .main__container {
     display: none;
   }
-  .main__containermobile_part1 {
+  .main__containermobile {
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
@@ -319,21 +316,21 @@
     padding: 0 9vw;
     width: 100vw;
   }
-  .main__containermobile_part1 h1 {
+  .main__containermobile h1 {
     margin: 12% 0% 0% 0%;
     font-size: 28px;
     font-weight: 700;
     line-height: 35px;
     color: #2d2d2d;
   }
-  .main__containermobile_part1 p {
+  .main__containermobile p {
     padding: 0;
     margin: 0;
   }
-  .main__containermobile_part1 span {
+  .main__containermobile span {
     color: #ff8345;
   }
-  .main__containermobile_part1 button {
+  .main__containermobile button {
     width: 130px;
     height: 46px;
     padding: 8px 22px;
@@ -347,26 +344,100 @@
     border-radius: 30px;
     outline: none;
   }
-  .main__containermobile_part1 button:hover {
+  .main__containermobile button:hover {
     background: #a5f48d;
     border: 1px solid #52d450;
   }
-  .main__containermobile_part2 {
+  .main__form {
     display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
-    justify-items: start;
-    padding: 0 9vw;
-    width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    max-width: 85vw;
+    height: 62px;
+    border-radius: 100px;
+    box-shadow: 0px 20px 30px 0px rgba(222, 222, 222, 0.2509803922);
+    padding: 10px 0px 10px 29px;
+    background-color: #fff;
   }
-  .main__photomobil {
+  .main__form input {
+    flex-grow: 2;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    color: #a1a1a1;
+    background-color: #fff;
+  }
+  .main__form input:focus {
+    outline: none;
+  }
+  .main__form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin: 2px 5px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22.5px;
+    background: #48b774;
+    border: 1px solid #48b774;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50px;
+    outline: none;
+  }
+  .main__form button:hover {
+    background: #48b774;
+    border: 1px solid #193d18;
+  }
+  form:focus-within {
+    outline: 2px solid #ff8345;
+  }
+  .main__ava {
+    display: grid;
+    grid-template-areas: "main__avacontainer main__phref";
+    grid-template-columns: 0.5fr 0.5fr;
+  }
+  .main__avacontainer {
+    grid-area: main__avacontainer;
     position: relative;
+  }
+  .main__ava1,
+  .main__ava2,
+  .main__ava3,
+  .main__ava4 {
+    position: absolute;
+    background: none;
+  }
+  .main__ava2 {
+    left: 25px;
+  }
+  .main__ava3 {
+    left: 50px;
+  }
+  .main__ava4 {
+    left: 70px;
+  }
+  .main__phref {
+    grid-area: main__phref;
+    padding: 12px 18px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    color: #707070;
+  }
+  .main__href {
+    text-decoration: none;
+    color: #fd905a;
   }
   .main__girl {
     position: absolute;
     z-index: 3;
     max-height: 50vh;
-    margin: 100px 70px;
+    margin: 10vh 70px;
     background: none;
   }
   .green_round {
@@ -375,7 +446,7 @@
     width: 120px;
     height: 120px;
     padding: 20px;
-    margin: 20vh 30vw;
+    margin: 15vh 32vw;
     border-radius: 50%;
     background: #48b774;
   }

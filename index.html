@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/8142/8142722.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@100&family=Oswald:wght@300&family=Poppins:wght@400;500&family=Source+Sans+Pro:wght@200&family=Vollkorn&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="./src/css/mainpage.css">
     <link rel="stylesheet" href="./src/css/header.css">
@@ -29,19 +35,19 @@
                 <ul id="ul">
                     <li><a href="javascript:void(0)" class="header__navmobile__closemenu" onclick="closeNav()">&times;
                         </a></li>
-                    <li class="header__navmobile__mobileTopUp"><a href="#mobileTopUp" class="link1">Mobile Top
+                    <li class="header__navmobile__mobileTopUp"><a href="#mobileTopUp">Mobile Top
                             Up</a>
                     </li>
-                    <li><a href="##about" class="header__navmobile__about">About</a></li>
-                    <li class="header__navmobile__rate"><a href="#rate" class="link1">Rate</a></li>
-                    <li class="header__navmobile__help"><a href="#help" class="link1">Help</a></li>
+                    <li><a href="#about" class="header__navmobile__about">About</a></li>
+                    <li class="header__navmobile__rate"><a href="#rate">Rate</a></li>
+                    <li class="header__navmobile__help"><a href="#help">Help</a></li>
                 </ul>
             </nav>
         </div>
         <button class="header__button" type="button">Sign Up</button>
     </header>
     <main class="main">
-        <div class="main__container">
+        <div class="main__container main__containermobile">
             <h1 class="main__h1">Now Buy Your <p class="main__h1__p">PIN or <span class="main__h1__span">Top
                         Up</span>
                 </p> With Bank Transfer
@@ -67,8 +73,7 @@
                 </p>
             </div>
         </div>
-
-        <div class="main__photo main__photomobil">
+        <div class="main__photo">
             <div class="green_round">
                 <img src="./assets/images/italy.svg" alt="italy" class="main__italy">
                 <img src="./assets/images/england.svg" alt="england" class="main__england">
@@ -79,35 +84,6 @@
             <img src="./assets/images/girl.png" alt="girl" class="main__girl">
         </div>
 
-        <div class="main__containermobile_part1">
-            <h1 class="main__h1">Now Buy Your <p class="main__h1__p">PIN or <span class="main__h1__span">Top
-                        Up</span>
-                </p> With Bank Transfer
-            </h1>
-            <p class="main__p">We Make international calling simple, relible, and cheap basedon your unique calling
-                behavior.</p>
-            <button class="main__button" type="button">Get Started</button>
-        </div>
-        <div class="main__containermobile_part2">
-            <form class="main__formmobile">
-                <input type="text" placeholder="Where do you want to call?" name="input" class="main__inputmobile"
-                    id="input" maxlength="12" required>
-                <button class="form__button" type="button" id="click"><img class="form__imgmobile" alt="search"
-                        src="./assets/images/search.svg"></img></button>
-            </form>
-            <div class="main__avamobile">
-                <div class="main__avacontainermobile">
-                    <img class="main__ava4" alt="ava" src="./assets/images/plus.svg">
-                    <img class="main__ava3" alt="ava" src="./assets/images/ava3.png">
-                    <img class="main__ava2" alt="ava" src="./assets/images/ava2.png">
-                    <img class="main__ava1" alt="ava" src="./assets/images/ava1.png">
-                </div>
-                <p class="main__phrefmobile">45k+ Regular User. <a href="#view_price_plan" class="main__href">View Price
-                        Plan</a>
-                </p>
-            </div>
-        </div>
-        </div>
     </main>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/menu.js"></script>
