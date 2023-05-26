@@ -1,9 +1,10 @@
+* {
+  background-color: #ecf7f3;
+  box-sizing: border-box;
+  font-family: "Poppins", "Montserrat", sans-serif;
+}
+
 @media screen and (min-width: 601px) {
-  * {
-    background-color: #ecf7f3;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-  }
   .main__containermobile_part1,
   .main__containermobile_part2 {
     display: none;
@@ -26,7 +27,7 @@
   }
   main button {
     grid-area: main__button;
-    width: 130px;
+    max-width: 140px;
     height: 46px;
     padding: 8px 22px;
     font-size: 15px;
@@ -34,7 +35,7 @@
     line-height: 22.5px;
     background: #48b774;
     border: 1px solid #48b774;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     border-radius: 30px;
     outline: none;
@@ -58,7 +59,6 @@
   .main__p {
     grid-area: main__p;
     max-width: 80%;
-    margin-top: 4%;
     font-size: 15px;
     font-weight: 500;
     line-height: 26px;
@@ -74,7 +74,7 @@
     border-radius: 100px;
     box-shadow: 0px 20px 30px 0px rgba(222, 222, 222, 0.2509803922);
     padding: 10px 0px 10px 29px;
-    background-color: #fff;
+    background-color: #ffffff;
   }
   .main__form input {
     flex-grow: 2;
@@ -83,7 +83,7 @@
     font-weight: 400;
     line-height: 18.75px;
     color: #a1a1a1;
-    background-color: #fff;
+    background-color: #ffffff;
   }
   .main__form input:focus {
     outline: none;
@@ -100,14 +100,17 @@
     line-height: 22.5px;
     background: #48b774;
     border: 1px solid #48b774;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     border-radius: 50px;
     outline: none;
   }
+  .main__form button img {
+    background: none;
+  }
   .main__form button:hover {
-    background: #48b774;
-    border: 1px solid #193d18;
+    background: #a5f48d;
+    border: 1px solid #52d450;
   }
   form:focus-within {
     outline: 2px solid #ff8345;
@@ -118,7 +121,7 @@
     grid-template-areas: "main__avacontainer main__phref";
     grid-template-columns: 0.2fr 0.8fr;
   }
-  .main__avacontainer {
+  .main__ava__container {
     grid-area: main__avacontainer;
     position: relative;
   }
@@ -147,7 +150,7 @@
     line-height: 18.75px;
     color: #707070;
   }
-  .main__href {
+  .main__phref a {
     text-decoration: none;
     color: #fd905a;
   }
@@ -155,13 +158,13 @@
     grid-area: main__photo;
     position: relative;
   }
-  .main__girl {
+  .main__photo__girl {
     position: absolute;
     z-index: 4;
     margin: 100px auto;
     background: none;
   }
-  .green_round {
+  .main__photo__green_round {
     position: absolute;
     z-index: 3;
     width: 280px;
@@ -300,11 +303,6 @@
   }
 }
 @media screen and (max-width: 600px) {
-  * {
-    background-color: #ecf7f3;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-  }
   .main__container {
     display: none;
   }
@@ -333,13 +331,12 @@
   .main__containermobile button {
     width: 130px;
     height: 46px;
-    padding: 8px 22px;
     font-size: 15px;
     font-weight: 500;
     line-height: 22.5px;
     background: #48b774;
     border: 1px solid #48b774;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     border-radius: 30px;
     outline: none;
@@ -357,16 +354,16 @@
     border-radius: 100px;
     box-shadow: 0px 20px 30px 0px rgba(222, 222, 222, 0.2509803922);
     padding: 10px 0px 10px 29px;
-    background-color: #fff;
+    background-color: #ffffff;
   }
   .main__form input {
     flex-grow: 2;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 18.75px;
     color: #a1a1a1;
-    background-color: #fff;
+    background-color: #ffffff;
   }
   .main__form input:focus {
     outline: none;
@@ -383,14 +380,17 @@
     line-height: 22.5px;
     background: #48b774;
     border: 1px solid #48b774;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     border-radius: 50px;
     outline: none;
   }
+  .main__form button img {
+    background: none;
+  }
   .main__form button:hover {
-    background: #48b774;
-    border: 1px solid #193d18;
+    background: #a5f48d;
+    border: 1px solid #52d450;
   }
   form:focus-within {
     outline: 2px solid #ff8345;
@@ -400,7 +400,7 @@
     grid-template-areas: "main__avacontainer main__phref";
     grid-template-columns: 0.5fr 0.5fr;
   }
-  .main__avacontainer {
+  .main__ava__container {
     grid-area: main__avacontainer;
     position: relative;
   }
@@ -422,25 +422,26 @@
   }
   .main__phref {
     grid-area: main__phref;
-    padding: 12px 18px;
-    margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 18.75px;
     color: #707070;
   }
-  .main__href {
+  .main__phref a {
     text-decoration: none;
     color: #fd905a;
   }
-  .main__girl {
+  .main__photo {
+    position: relative;
+  }
+  .main__photo__girl {
     position: absolute;
-    z-index: 3;
-    max-height: 50vh;
-    margin: 10vh 70px;
+    z-index: 4;
+    max-height: 40vh;
+    margin: 10vh 90px;
     background: none;
   }
-  .green_round {
+  .main__photo__green_round {
     position: absolute;
     z-index: 2;
     width: 120px;

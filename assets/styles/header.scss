@@ -1,3 +1,5 @@
+@import "./_vars.scss";
+
 @media screen and (min-width: 601px) {
   .header {
     display: flex;
@@ -40,7 +42,7 @@
           a {
             display: flex;
             text-decoration: none;
-            color: #4a4a4a;
+            color: $font-color;
             margin: 2%;
             height: 60%;
             width: 100%;
@@ -49,8 +51,8 @@
           }
 
           p {
-            color: #4a4a4a;
-            height: 57.5%;
+            color: $font-color;
+            height: 56%;
             max-width: 20%;
             justify-content: center;
             align-items: center;
@@ -60,7 +62,7 @@
           p:hover {
             content: "";
             display: block;
-            height: 81.5%;
+            height: 80%;
             padding-top: 5px;
             border-bottom: 2px solid #ff8345;
           }
@@ -69,21 +71,20 @@
     }
 
     button {
-      width: 108px;
       height: 42px;
       padding: 9px 23px;
       font-size: 16px;
       font-weight: 500;
-      background: #48b774;
+      background: $color;
       border: 1px solid #48b774;
-      color: #fff;
+      color: $font-color-second;
       cursor: pointer;
       border-radius: 20px;
       outline: none;
     }
 
     button:hover {
-      background: #a5f48d;
+      background: $background-color-hover;
       border: 1px solid #52d450;
     }
   }
@@ -103,10 +104,10 @@
   .header__navmobile__openmenu {
     width: 22vw;
     height: 4vh;
-    padding: 1vh 0vw 0vh 0vw;
+    padding: 0.5vh 0vw 0vh 0vw;
     margin-left: 2vw;
-    color: white;
-    background-color: #48b774;
+    color: $font-color-second;
+    background-color: $color;
     font-size: 4vw;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
@@ -114,16 +115,16 @@
     border-radius: 50px;
 
     .header__navmobile__openmenu:hover {
-      background: #a5f48d;
+      background: $background-color-hover;
       border: 1px solid #52d450;
     }
 
     a {
-      color: white;
+      color: $font-color-second;
       text-decoration: none;
       display: block;
       transition: 0.3s;
-      background-color: #48b774;
+      background-color: $color;
       border-radius: 50px;
     }
   }
@@ -133,7 +134,7 @@
     font-size: 35px;
     margin-left: 80%;
     text-decoration: none;
-    color: white;
+    color: $font-color-second;
   }
 
   .header__mobile {
@@ -156,8 +157,8 @@
       z-index: 4;
       top: 0;
       right: 0;
-      color: white;
-      background-color: #48b774;
+      color: $font-color-second;
+      background-color: $color;
       font-family: "Raleway", sans-serif;
       font-weight: 500;
       font-size: 5.5vw;
@@ -169,18 +170,18 @@
       li {
         padding: 1vh;
         list-style-type: none;
-        color: white;
+        color: $font-color-second;
         text-decoration: none;
-        background-color: #48b774;
+        background-color: $color;
 
         a {
-          color: white;
+          color: $font-color-second;
           text-decoration: none;
-          background-color: #48b774;
+          background-color: $color;
         }
 
         a:hover {
-          color: white;
+          color: $font-color-second;
           border-bottom: 2px solid #ff8345;
         }
       }
